@@ -1,0 +1,23 @@
+<div class="box-carousel">
+  <ngb-carousel
+    #carousel
+    [interval]="5000"
+    [pauseOnHover]="pauseOnHover"
+    (slide)="onSlide($event)"
+  >
+    <ng-template ngbSlide *ngFor="let filme of filmes; index as i">
+      <div class="carousel-caption">
+        <h3>{{filme.title}}</h3>
+      </div>
+      <a
+        href="https://www.google.com/?q={{filme.title}}"
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+      >
+        <div class="picsum-img-wrapper">
+          <img [src]="'https://image.tmdb.org/t/p/w400' + filme.poster_path" alt="Popularidade: {{ filme.popularity }}" />
+        </div>
+      </a>
+    </ng-template>
+  </ngb-carousel>
+</div>

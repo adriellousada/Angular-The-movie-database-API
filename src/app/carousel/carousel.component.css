@@ -1,0 +1,10 @@
+.box-carousel {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+.carousel-caption{
+  background-color: black;
+  width: 400px;
+  margin-left: -60px;
+}
