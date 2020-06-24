@@ -18,6 +18,7 @@ export class CarouselComponent implements OnInit {
     this.carouselService.getNextMovies().subscribe(data => {
       let i;
       console.log(data);
+      console.log(data);
       for (i = 0; i < data.length; i++ ){
         this.filmes.push(data[i]);
       }
