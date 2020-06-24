@@ -14,10 +14,10 @@ export class CarouselComponent implements OnInit {
 
   constructor( private carouselService: CarouselService) {}
 
-
   ngOnInit(): void {
     this.carouselService.getNextMovies().subscribe(data => {
       let i;
+      console.log(data);
       for (i = 0; i < data.length; i++ ){
         this.filmes.push(data[i]);
       }

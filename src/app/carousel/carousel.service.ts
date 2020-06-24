@@ -12,7 +12,7 @@ export class CarouselService {
 
   getNextMovies() {
     return this.htpp
-      .get(`${this.URI}/movie/upcoming?api_key=${this.KEY}&language=pt-BR`)
+      .get(`${this.URI}/movie/popular?api_key=${this.KEY}&language=pt-BR&page=1`)
       .pipe(map((data: any) => data.results));
   }
 }

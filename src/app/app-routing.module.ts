@@ -7,7 +7,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 
 const routes: Routes = ([
   { path: '', component: CarouselComponent },
-  { path: 'details', component: MovieDetailsComponent }
+  { path: 'details/:id', component: MovieDetailsComponent }
 ]);
 
 @NgModule({

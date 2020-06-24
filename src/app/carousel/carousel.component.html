@@ -10,7 +10,7 @@
         <h3>{{filme.title}}</h3>
       </div>
       <a
-       routerLink="/details"
+       [routerLink]="['/details',filme.id]"
         target="_self"
         rel="nofollow noopener noreferrer"
       >

@@ -10,8 +10,8 @@ export class MovieDetailsService {
   private KEY = '4581882ce738bbdeafb130c633d39bab';
   constructor(private htpp: HttpClient) {}
 
-  getMovieById() {
+  getMovieById(id) {
     return this.htpp
-      .get(`${this.URI}/find/{514847}?api_key=${this.KEY}&language=en-US&external_source=imdb_id`);
+      .get(`${this.URI}/movie/${id}?api_key=${this.KEY}&language=pt-BR`);
   }
 }
