@@ -1,7 +1,7 @@
 <div class="box-carousel">
   <ngb-carousel
     #carousel
-    [interval]="5000"
+    [interval]="2000"
     [pauseOnHover]="pauseOnHover"
     (slide)="onSlide($event)"
   >
@@ -10,8 +10,8 @@
         <h3>{{filme.title}}</h3>
       </div>
       <a
-        href="https://www.google.com/?q={{filme.title}}"
-        target="_blank"
+       routerLink="/details"
+        target="_self"
         rel="nofollow noopener noreferrer"
       >
         <div class="picsum-img-wrapper">

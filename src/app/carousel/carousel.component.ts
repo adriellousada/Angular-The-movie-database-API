@@ -17,7 +17,6 @@ export class CarouselComponent implements OnInit {
 
   ngOnInit(): void {
     this.carouselService.getNextMovies().subscribe(data => {
-      console.log(data);
       let i;
       for (i = 0; i < data.length; i++ ){
         this.filmes.push(data[i]);
