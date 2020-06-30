@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
+import { ResultSearchComponent } from './result-search/result-search.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FavoritosComponent } from './favoritos/favoritos.component';
     MovieDetailsComponent,
     NavbarComponent,
     FavoritosComponent,
+    ResultSearchComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,15 +3,25 @@
     <a href="" class="link-bar">Home</a>
     <a href="/favoritos" class="link-bar">Favoritos</a>
   </div>
-  <form class="form-inline">
+  <form *ngIf="url_actual =='/'" class="form-inline">
     <input
       class="form-control mr-sm-2"
       type="search"
       placeholder="Search"
       aria-label="Search"
+      #search
     />
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+    <button
+      class="btn btn-outline-success my-2 my-sm-0"
+      type="button"
+      (click)="getResult(search.value)"
+    >
       Search
     </button>
   </form>
 </nav>
+<div class="box-all-content">
+  <div class="box-result">
+    <app-result-search [datas]="resultData"></app-result-search>
+  </div>
+</div>
