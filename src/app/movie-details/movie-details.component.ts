@@ -25,7 +25,7 @@ export class MovieDetailsComponent implements OnInit {
     } else {
       this.filmesFavoritos.push(idFilme, nomeFilme);
       localStorage.setItem('favoritos', JSON.stringify(this.filmesFavoritos));
-      alert('Filme adicionado à lista de favoritos');
+      window.location.href = '/favoritos';
       console.log(this.filmesFavoritos);
     }
   }
