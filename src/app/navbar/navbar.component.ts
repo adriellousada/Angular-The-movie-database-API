@@ -10,7 +10,7 @@ import { NavbarService } from './navbar.service';
 export class NavbarComponent implements OnInit {
 
   constructor( private navService: NavbarService ) { }
-   
+
   url_actual;
 
   ngOnInit(): void {
@@ -22,6 +22,7 @@ export class NavbarComponent implements OnInit {
   getResult(value){
     this.navService.getResultSearch(value).subscribe(data => {
       console.log(data);
+      document.getElementById('resultados').style.display = '';
       this.resultData = data;
     });
   }

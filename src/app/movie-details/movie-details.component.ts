@@ -11,9 +11,23 @@ import {Location} from '@angular/common';
 
 export class MovieDetailsComponent implements OnInit {
   filmeDetalhado;
+  filmesFavoritos = [];
   constructor( private detailService: MovieDetailsService, private route: ActivatedRoute, private _location: Location) { }
   backClicked() {
     this._location.back();
+  }
+  saveFav(idFilme,nomeFilme){
+    if (localStorage.hasOwnProperty('favoritos')) {
+      this.filmesFavoritos = JSON.parse(localStorage.getItem('favoritos'));
+    }
+    if(this.filmesFavoritos.includes(idFilme) && this.filmesFavoritos.includes(nomeFilme)){
+      alert('Filme já incluso na lista de favoritos');
+    } else {
+      this.filmesFavoritos.push(idFilme, nomeFilme);
+      localStorage.setItem('favoritos', JSON.stringify(this.filmesFavoritos));
+      alert('Filme adicionado à lista de favoritos');
+      console.log(this.filmesFavoritos);
+    }
   }
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
